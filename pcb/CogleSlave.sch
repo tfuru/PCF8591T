@@ -1,0 +1,325 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:CogleSlave-cache
+EELAYER 24 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "CogleSlave PCF8591T"
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L PCF8591T U1
+U 1 1 55A0C14B
+P 4550 3300
+F 0 "U1" H 4550 2300 60  0000 C CNN
+F 1 "PCF8591T" H 4550 3300 60  0000 C CNN
+F 2 "SMD_Packages:SO-16-W" H 4450 2200 60  0000 C CNN
+F 3 "" H 4550 3300 60  0000 C CNN
+	1    4550 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X04 P1
+U 1 1 55A0C1B0
+P 2800 3450
+F 0 "P1" H 2800 3700 50  0000 C CNN
+F 1 "CONN_01X04" V 2900 3450 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x04" H 2800 3450 60  0001 C CNN
+F 3 "" H 2800 3450 60  0000 C CNN
+	1    2800 3450
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_01X08 P3
+U 1 1 55A0C1E1
+P 7200 3700
+F 0 "P3" H 7200 4150 50  0000 C CNN
+F 1 "CONN_01X08" V 7300 3700 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Angled_1x08" H 7200 3700 60  0001 C CNN
+F 3 "" H 7200 3700 60  0000 C CNN
+	1    7200 3700
+	1    0    0    -1  
+$EndComp
+Text Label 3100 3300 0    60   ~ 0
+VCC
+Text Label 3100 3600 0    60   ~ 0
+GND
+Wire Wire Line
+	3300 3400 3000 3400
+Wire Wire Line
+	3000 3500 3300 3500
+Text Label 3100 3400 0    60   ~ 0
+SDA
+Text Label 3100 3500 0    60   ~ 0
+SCL
+$Comp
+L +5V #PWR01
+U 1 1 55A0C32F
+P 2100 3150
+F 0 "#PWR01" H 2100 3240 20  0001 C CNN
+F 1 "+5V" H 2100 3240 30  0000 C CNN
+F 2 "" H 2100 3150 60  0000 C CNN
+F 3 "" H 2100 3150 60  0000 C CNN
+	1    2100 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR02
+U 1 1 55A0C349
+P 2100 4700
+F 0 "#PWR02" H 2100 4700 30  0001 C CNN
+F 1 "GND" H 2100 4630 30  0001 C CNN
+F 2 "" H 2100 4700 60  0000 C CNN
+F 3 "" H 2100 4700 60  0000 C CNN
+	1    2100 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Csmall C1
+U 1 1 55A0C363
+P 2100 3800
+F 0 "C1" H 2125 3850 30  0000 L CNN
+F 1 "10μF" H 2125 3750 30  0000 L CNN
+F 2 "Capacitors_SMD:c_1206" H 2100 3800 60  0001 C CNN
+F 3 "" H 2100 3800 60  0000 C CNN
+	1    2100 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 3150 2100 3700
+Wire Wire Line
+	2100 3900 2100 4700
+$Comp
+L PWR_FLAG #FLG03
+U 1 1 55A0C3B3
+P 1800 3200
+F 0 "#FLG03" H 1800 3295 30  0001 C CNN
+F 1 "PWR_FLAG" H 1800 3380 30  0000 C CNN
+F 2 "" H 1800 3200 60  0000 C CNN
+F 3 "" H 1800 3200 60  0000 C CNN
+	1    1800 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L PWR_FLAG #FLG04
+U 1 1 55A0C3CF
+P 1800 4250
+F 0 "#FLG04" H 1800 4345 30  0001 C CNN
+F 1 "PWR_FLAG" H 1800 4430 30  0000 C CNN
+F 2 "" H 1800 4250 60  0000 C CNN
+F 3 "" H 1800 4250 60  0000 C CNN
+	1    1800 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1800 4250 1800 4350
+Wire Wire Line
+	1800 4350 2100 4350
+Connection ~ 2100 4350
+Wire Wire Line
+	1800 3200 1800 3350
+Wire Wire Line
+	1800 3350 2100 3350
+Connection ~ 2100 3350
+Wire Wire Line
+	3000 3300 3300 3300
+Wire Wire Line
+	3000 3600 3300 3600
+Text Label 2100 3500 0    60   ~ 0
+VCC
+Text Label 2100 4100 0    60   ~ 0
+GND
+Wire Wire Line
+	5150 4050 5650 4050
+Wire Wire Line
+	5150 4150 5500 4150
+Text Label 5400 4150 2    60   ~ 0
+SDA
+Text Label 5400 4050 2    60   ~ 0
+SCL
+Wire Wire Line
+	3950 4150 3700 4150
+Wire Wire Line
+	5150 3450 5550 3450
+Text Label 5400 3450 2    60   ~ 0
+VCC
+$Comp
+L +5V #PWR05
+U 1 1 55A0C7D9
+P 6450 4050
+F 0 "#PWR05" H 6450 4140 20  0001 C CNN
+F 1 "+5V" H 6450 4140 30  0000 C CNN
+F 2 "" H 6450 4050 60  0000 C CNN
+F 3 "" H 6450 4050 60  0000 C CNN
+	1    6450 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R1
+U 1 1 55A0C829
+P 6050 4550
+F 0 "R1" V 6130 4550 40  0000 C CNN
+F 1 "10k" V 6057 4551 40  0000 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 5980 4550 30  0001 C CNN
+F 3 "" H 6050 4550 30  0000 C CNN
+	1    6050 4550
+	0    1    1    0   
+$EndComp
+$Comp
+L R R2
+U 1 1 55A0C863
+P 5850 4800
+F 0 "R2" V 5930 4800 40  0000 C CNN
+F 1 "10k" V 5857 4801 40  0000 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 5780 4800 30  0001 C CNN
+F 3 "" H 5850 4800 30  0000 C CNN
+	1    5850 4800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6300 4550 6450 4550
+Wire Wire Line
+	6450 4050 6450 4800
+Wire Wire Line
+	6450 4800 6100 4800
+Connection ~ 6450 4550
+Wire Wire Line
+	5500 4150 5500 4800
+Wire Wire Line
+	5650 4050 5650 4550
+Wire Wire Line
+	5650 4550 5800 4550
+Text Label 6450 4200 0    60   ~ 0
+VCC
+Wire Wire Line
+	5150 3650 5350 3650
+Wire Wire Line
+	5350 3650 5350 3450
+Connection ~ 5350 3450
+Wire Wire Line
+	5150 3750 5550 3750
+Text Label 5250 3750 0    60   ~ 0
+GND
+Wire Wire Line
+	3950 3450 3700 3450
+Wire Wire Line
+	3950 3550 3700 3550
+Wire Wire Line
+	3950 3650 3700 3650
+Wire Wire Line
+	3950 3750 3700 3750
+Text Label 3750 3450 0    60   ~ 0
+AIN0
+Text Label 3750 3550 0    60   ~ 0
+AIN1
+Text Label 3750 3650 0    60   ~ 0
+AIN2
+Text Label 3750 3750 0    60   ~ 0
+AIN3
+Wire Wire Line
+	6700 3350 7000 3350
+Wire Wire Line
+	7000 4050 6700 4050
+Wire Wire Line
+	7000 3450 6700 3450
+Wire Wire Line
+	7000 3550 6700 3550
+Wire Wire Line
+	7000 3650 6700 3650
+Wire Wire Line
+	7000 3750 6700 3750
+Text Label 6800 3350 0    60   ~ 0
+VCC
+Text Label 6800 4050 0    60   ~ 0
+GND
+Text Label 6800 3450 0    60   ~ 0
+AIN0
+Text Label 6800 3550 0    60   ~ 0
+AIN1
+Text Label 6800 3650 0    60   ~ 0
+AIN2
+Text Label 6800 3750 0    60   ~ 0
+AIN3
+NoConn ~ 5150 3850
+NoConn ~ 5150 3950
+NoConn ~ 7000 3850
+NoConn ~ 7000 3950
+Wire Wire Line
+	3950 3850 3700 3850
+Wire Wire Line
+	3950 3950 3700 3950
+Wire Wire Line
+	3950 4050 3700 4050
+Text Label 3750 3850 0    60   ~ 0
+A0
+Text Label 3750 3950 0    60   ~ 0
+A1
+Text Label 3750 4050 0    60   ~ 0
+A2
+Wire Wire Line
+	3000 4250 3300 4250
+Wire Wire Line
+	3000 4150 3300 4150
+Wire Wire Line
+	3000 4050 3300 4050
+Text Label 3100 4250 0    60   ~ 0
+A0
+Text Label 3100 4150 0    60   ~ 0
+A1
+Text Label 3100 4050 0    60   ~ 0
+A2
+NoConn ~ 5150 3550
+Text Label 3750 4150 0    60   ~ 0
+GND
+$Comp
+L CONN_01X04 P2
+U 1 1 55A0DC1F
+P 2800 4100
+F 0 "P2" H 2800 4350 50  0000 C CNN
+F 1 "CONN_01X04" V 2900 4100 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x04" H 2800 4100 60  0001 C CNN
+F 3 "" H 2800 4100 60  0000 C CNN
+	1    2800 4100
+	-1   0    0    1   
+$EndComp
+NoConn ~ 3000 3950
+Wire Wire Line
+	5500 4800 5600 4800
+$EndSCHEMATC
