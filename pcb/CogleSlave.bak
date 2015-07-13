@@ -85,9 +85,9 @@ Wire Wire Line
 	3300 3400 3000 3400
 Wire Wire Line
 	3000 3500 3300 3500
-Text Label 3100 3500 0    60   ~ 0
-SDA
 Text Label 3100 3400 0    60   ~ 0
+SDA
+Text Label 3100 3500 0    60   ~ 0
 SCL
 $Comp
 L +5V #PWR01
