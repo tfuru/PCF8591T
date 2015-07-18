@@ -177,7 +177,7 @@ SCL
 Wire Wire Line
 	4950 4150 4700 4150
 Wire Wire Line
-	6150 3450 6550 3450
+	6150 3450 6700 3450
 Text Label 6400 3450 2    60   ~ 0
 VCC
 $Comp
@@ -229,12 +229,12 @@ Wire Wire Line
 Text Label 7450 4200 0    60   ~ 0
 VCC
 Wire Wire Line
-	6150 3650 6350 3650
+	6150 3650 6500 3650
 Wire Wire Line
-	6350 3650 6350 3450
-Connection ~ 6350 3450
+	6500 3650 6500 3450
+Connection ~ 6500 3450
 Wire Wire Line
-	6150 3750 6550 3750
+	6150 3750 6700 3750
 Text Label 6250 3750 0    60   ~ 0
 GND
 Wire Wire Line
@@ -279,7 +279,6 @@ Text Label 7800 3750 0    60   ~ 0
 AIN3
 NoConn ~ 6150 3850
 NoConn ~ 6150 3950
-NoConn ~ 8000 3850
 NoConn ~ 8000 3950
 Wire Wire Line
 	4950 3850 4700 3850
@@ -305,7 +304,6 @@ Text Label 4100 4150 0    60   ~ 0
 A1
 Text Label 4100 4050 0    60   ~ 0
 A2
-NoConn ~ 6150 3550
 Text Label 4750 4150 0    60   ~ 0
 GND
 $Comp
@@ -322,4 +320,12 @@ $EndComp
 NoConn ~ 4000 3950
 Wire Wire Line
 	6500 4800 6600 4800
+Wire Wire Line
+	6150 3550 6400 3550
+Text Label 6250 3550 0    60   ~ 0
+AOUT
+Wire Wire Line
+	8000 3850 7700 3850
+Text Label 7800 3850 0    60   ~ 0
+AOUT
 $EndSCHEMATC
